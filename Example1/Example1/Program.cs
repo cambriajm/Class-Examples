@@ -9,6 +9,8 @@
         {
         Console.WriteLine("Hello, World!");
         Console.Beep(100,700);
+        Console.Beep(200, 900);
+        Console.Beep(200, 900000);
         Console.Read();
         }
     }
