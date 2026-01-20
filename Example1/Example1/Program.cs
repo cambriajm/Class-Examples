@@ -24,13 +24,27 @@
         int quarter = 500;//milliseconds
         int whole = 1000; //miliseconds
         int eighth = 250; //miliseconds 
+        int sixteenth = 125; //miliseconds
     
         Console.WriteLine("Hello, World!");
         Console.WriteLine("Play song");
-        Console.Beep(D4, quarter);
-        Console.Beep(D4, quarter);
-        Console.Beep(D5, quarter);
-        Console.Beep(A4, quarter);
+        Console.Beep(D4, sixteenth);
+        Console.Beep(D4, sixteenth);
+        Console.Beep(D5, eighth);
+        Console.Beep(A4, eighth);
+        Console.Beep(G4S, eighth);
+        Console.Beep(G4, eighth);
+        Console.Beep(F4, eighth);
+        Console.Beep();
+        Console.Beep();
+        Console.Beep();
+        Console.Beep();
+        Console.Beep();
+        Console.Beep();
+        Console.Beep();
+        Console.Beep();
+        Console.Beep();
+        Console.Beep();
         Console.Beep();
         Console.Beep();
         Console.Beep();
