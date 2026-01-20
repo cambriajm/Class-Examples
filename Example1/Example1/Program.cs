@@ -15,6 +15,9 @@
         int G4 = 392;
         int A4 = 440;
         int D5 = 587;
+        int G4S = 415;
+        int B3 = 246;
+        int A3S = 233;
 
 
         //note duration
