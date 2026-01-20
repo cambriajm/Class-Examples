@@ -21,10 +21,10 @@
 
 
         //note duration
-        int quarter = 500;//milliseconds
-        int whole = 1000; //miliseconds
-        int eighth = 250; //miliseconds 
-        int sixteenth = 125; //miliseconds
+        int quarter = 600;//milliseconds
+        int whole = 1100; //miliseconds
+        int eighth = 350; //miliseconds 
+        int sixteenth = 225; //miliseconds
     
         Console.WriteLine("Hello, World!");
         Console.WriteLine("Play song");
@@ -35,13 +35,13 @@
         Console.Beep(G4S, eighth);
         Console.Beep(G4, eighth);
         Console.Beep(F4, eighth);
-        Console.Beep();
-        Console.Beep();
-        Console.Beep();
-        Console.Beep();
-        Console.Beep();
-        Console.Beep();
-        Console.Beep();
+        Console.Beep(D4, sixteenth);
+        Console.Beep(F4, sixteenth);
+        Console.Beep(G4, sixteenth);
+        Console.Beep(C4, sixteenth);
+        Console.Beep(C4, sixteenth);
+        Console.Beep(D5, eighth);
+        Console.Beep(A4, quarter);
         Console.Beep();
         Console.Beep();
         Console.Beep();
