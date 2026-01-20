@@ -13,16 +13,25 @@
         int E4 = 330;
         int F4 = 349;
         int G4 = 392;
+        int A4 = 440;
+        int D5 = 587;
 
 
         //note duration
         int quarter = 500;//milliseconds
+        int whole = 1000; //miliseconds
+        int eighth = 250; //miliseconds 
     
         Console.WriteLine("Hello, World!");
         Console.WriteLine("Play song");
-        Console.Beep(293,350);
-        Console.Beep(293,350);
-        Console.Beep(587,350);
-        Console.Read();
-        }
+        Console.Beep(D4, quarter);
+        Console.Beep(D4, quarter);
+        Console.Beep(D5, quarter);
+        Console.Beep(A4, quarter);
+        Console.Beep();
+        Console.Beep();
+        Console.Beep();
+        Console.Beep();
+
+    }
     }
