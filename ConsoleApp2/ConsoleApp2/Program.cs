@@ -16,8 +16,9 @@
 
             //Console.WriteLine($"User entered: \"{userInput}\""); //easy way
             //Console.WriteLine("User entered: " + "\"" + userInput + "\""); // harder way same thing
-            string userInput; 
+            
             Console.WriteLine("Hello! What is your name?");
+            string userInput = Console.ReadLine();
             Console.WriteLine($"Hello {userInput}");
 
 
