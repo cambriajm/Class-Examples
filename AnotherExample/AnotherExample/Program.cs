@@ -33,6 +33,15 @@
             } while (number <= 3);
             //do loop runs once if true. evaluates once. not true. wont run again 
 
+            string userInput = "";
+            Console.WriteLine("The password is 12345 just like my luggage");
+
+            while (Console.ReadLine() == "12345");
+            {
+                Console.WriteLine("All my secrets");
+            }
+            
+
 
 
 
