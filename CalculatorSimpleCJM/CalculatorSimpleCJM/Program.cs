@@ -1,8 +1,8 @@
 ﻿namespace SimpleCalculatorCM
-    //Cambria Morgan
-    //RCET 2265
-    //Spring 2026
-    //Simple Calculator
+//Cambria Morgan
+//RCET 2265
+//Spring 2026
+//Simple Calculator
 
 {
     internal class Program
@@ -12,7 +12,7 @@
 
         {
             string userInput = "";
-            int firstNumber, secondNumber, thirdNumber ;
+            int firstNumber, secondNumber, thirdNumber;
 
             Console.WriteLine("Please enter your first number");
             userInput = Console.ReadLine();
@@ -29,7 +29,7 @@
             userInput = Console.ReadLine();
             Console.WriteLine($"You entered {userInput}");
             switch (userInput)
-            { 
+            {
                 case "add":
                     Console.WriteLine($"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
                     break;
@@ -44,14 +44,17 @@
                     break;
 
 
+
+
             }
 
-            
 
-            
+
+
 
 
             Console.ReadLine();
         }
     }
 }
+
