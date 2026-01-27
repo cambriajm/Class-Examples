@@ -7,7 +7,7 @@ namespace expectations
         static void Main(string[] args)
         {
             string userInput = "";
-            int result = 0; ;
+            int result = 0;
             bool isValid = false;
             string message = "";
 
@@ -28,28 +28,20 @@ namespace expectations
                 catch (Exception ex)
                     
                 {
-                    if (userInput == "Q") || userInput == "Q"
-                        
-                        {
-                        (userInput = "Q")
+                    if (userInput == "Q") || userInput == "q")
+                    {
+                        (userInput = "Q");
+                        isValid = true;
                     }
-                    message = $"Have a nice day!";
-                    isValid = true;
                     else
                     {
-                    message = $"{userInput} is not a number";
-                    }
-                }
-                {
-                    Console.WriteLine($"{userInput} is not a number " + ex.Message); //or stacktrace
-
-                }
-                
+                        message = $"{userInput} is not a number";
+                    }      
             }
-            while (isValid = false);
 
             Console.WriteLine($"Good job, you know your numbers, {result} is a number!");
 
         }
+            while (isValid = false);
     }
 }
