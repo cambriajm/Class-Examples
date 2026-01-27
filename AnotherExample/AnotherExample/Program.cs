@@ -15,31 +15,48 @@
             //}
 
 
-            int number = 1;
-
-            //only runs if condition is true
-            while (number <= 5)
+            //mested loop and string padding yippee
+            //
+            for (int array = 0; array < 10; array++)
             {
-                Console.WriteLine($"In While Loop Number: {number}");
-                number++;
-            }//checks before it runs
 
-
-            //always runs at least one time 
-            do
+            for (int row = 0; row < 10; row++)
             {
-                Console.WriteLine($"In Do Loop Number: {number}");
-                number++;
-            } while (number <= 3);
-            //do loop runs once if true. evaluates once. not true. wont run again 
-
-            string userInput = "";
-            Console.WriteLine("The password is 12345 just like my luggage");
-
-            while (Console.ReadLine() == "12345");
+            for (int column = 0; column < 10; column++)
             {
-                Console.WriteLine("All my secrets");
+                Console.Write((row + column).ToString(  ).PadLeft(4));
             }
+                Console.WriteLine();
+            }
+            }
+
+
+
+            //int number = 1;
+
+            ////only runs if condition is true
+            //while (number <= 5)
+            //{
+            //    Console.WriteLine($"In While Loop Number: {number}");
+            //    number++;
+            //}//checks before it runs
+
+
+            ////always runs at least one time 
+            //do
+            //{
+            //    Console.WriteLine($"In Do Loop Number: {number}");
+            //    number++;
+            //} while (number <= 3);
+            ////do loop runs once if true. evaluates once. not true. wont run again 
+
+            //string userInput = "";
+            //Console.WriteLine("The password is 12345 just like my luggage");
+
+            //while (Console.ReadLine() == "12345");
+            //{
+            //    Console.WriteLine("All my secrets");
+            //}
             
 
 
