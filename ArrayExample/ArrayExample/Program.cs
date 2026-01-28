@@ -15,7 +15,21 @@
             fruits[6] = "dragonfruit";
             //fruits[7] = "strawberry";//this will crash YIPPEE
 
-            Console.WriteLine(fruits[3]);
+
+            for (int i = 0; i < 7; i++)
+            {
+                Console.WriteLine(fruits[i]);
+            }
+
+            //same with no index or need for known length
+            foreach (string fruit in fruits)
+            {
+                Console.WriteLine(fruit);
+            }
+
+            Console.WriteLine($"the length of fruits is: {fruits.Length}");
+
+            Console.WriteLine(fruits);
 
 
                 
