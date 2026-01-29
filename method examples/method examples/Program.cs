@@ -12,7 +12,7 @@
             //SayHello();
             //ShowCount();
             Console.WriteLine(count);
-            count = SumOf();
+            count = SumOf(5, 7);
             Console.WriteLine(count);
             //pause
             Console.Read();
@@ -33,9 +33,9 @@
             Console.WriteLine(count);
         }
 
-        static int SumOf()
+        static int SumOf(int firstNumber, int secondNumber)
         {
-            return 1 + 1; 
+            return firstNumber + secondNumber; 
         }
 
     }
