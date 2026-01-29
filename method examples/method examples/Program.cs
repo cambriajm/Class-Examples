@@ -5,12 +5,14 @@
         static void Main(string[] args)
         {
             int count = 5;
-            SayHello();
-            AddNumbers();
-            AddNumbers();
-            SayHello();
-            SayHello();
-            ShowCount();
+            //SayHello();
+            //AddNumbers();
+            //AddNumbers();
+            //SayHello();
+            //SayHello();
+            //ShowCount();
+            Console.WriteLine(count);
+            count = SumOf();
             Console.WriteLine(count);
             //pause
             Console.Read();
@@ -29,6 +31,11 @@
         {
             int count = 7;
             Console.WriteLine(count);
+        }
+
+        static int SumOf()
+        {
+            return 1 + 1; 
         }
 
     }
