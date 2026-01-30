@@ -41,18 +41,61 @@ namespace ControlFlowSequence
                 }
 
             } while (validResponse == false || userQuit == false);
+            Console.WriteLine("end first loop");
             validResponse = false; //reset flag
 
             //secondNumber
-            while (validResponse == false && userQuit == false) ;
+            do
             {
+                Console.WriteLine("Enter your second number");
+                userInput = Console.ReadLine();
+                try
+                {
+                    Console.WriteLine($"you entered {int.Parse(userInput)}");
+                    validResponse = true;
+                }
+                catch (Exception)
+                {
+                    if (userInput == "Q" || userInput == "q")
+                    {
+                        userQuit = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{userInput} is not a number");
+                    }
+                }
 
-            }
+            } while (validResponse == false || userQuit == false);
+            Console.WriteLine("end second loop");
             validResponse = false; //reset flag
 
             //operationChoice
             while (validResponse == false && userQuit == false) ;
             {
+                Console.WriteLine("select your operation: \n 1. Option 1\n2. Option 2\n3. Option 3");
+                userInput = Console.ReadLine();
+
+                switch (userInput) 
+                {
+                case "1":
+                    break;
+                case "2":
+                    break;
+                case "3":
+                    break;
+                case "Q":
+                        userQuit = true;
+                    break;
+                case "q":
+                        userQuit = true;
+                    break;
+                default:
+                        Console.WriteLine("YEEHAW");
+                    break;
+                       
+                        Console.WriteLine("end third loop");
+                }
 
             }
 
