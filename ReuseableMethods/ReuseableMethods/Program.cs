@@ -1,4 +1,6 @@
-﻿namespace ReuseableMethods
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ReusableMethods
 {
     internal class Program
     {
@@ -9,43 +11,58 @@
             Console.Read();
         }
 
+        //keep track of a running total 
+        //add the integer passed in as an argument to the total 
+        //return the running total 
+        //optionally clear the running total 
+        static int RunningTotal()
+        {
+            return 0;
+        }
+
+
+
+
+        // test and visualize random number method
         static void TestRandomNumber()
         {
-            int[] counts = new int[11];
-            int max = 10, min = 5, currentNumber = 0;
-            
+            int[] counts = new int[12];
+            int max = 11, min = 0, currentNumber = 0, padding = 5;
+
             for (int i = 0; i < 1000; i++)
             {
-
-
-                //Console.Write(RandomNumberBetween(10, 5).ToString().PadLeft(4));
+                //Console.Write(RandomNumberBetween(10, 5).ToString().PadLeft(2));
                 currentNumber = RandomNumberBetween(max, min);
                 counts[currentNumber] += 1;
 
             }
 
+            //make column headers
             for (int i = 0; i < counts.Length; i++)
             {
-                Console.WriteLine();
-                Console.WriteLine();
+                Console.Write(i.ToString().PadLeft(padding) + "|");
             }
             Console.WriteLine();
-            //display count
+            //display counts in nice columns
             foreach (int count in counts)
             {
-                Console.Write(count.ToString().PadLeft(3) + "  |");
+                Console.Write(count.ToString().PadLeft(padding) + "|");
             }
-
-            static int RandomNumberBetween(int max, int min)
-            {
-                Random rand = new Random();
-                int range = max - min; //get actual number range
-                int randomNumber = rand.Next(range);
-                randomNumber += min; //shift value back up
-                randomNumber ++; 
-                return randomNumber;
-            }
-
+        }
+        /// <summary>
+        /// Returns a random integer with in min to max range inclusive.
+        /// </summary>
+        /// <param name="max"></param>
+        /// <param name="min"></param>
+        /// <returns>Integer</returns>
+        static int RandomNumberBetween(int max, int min)
+        {
+            Random rand = new Random();
+            max += 1; //make max inclusive
+            int range = max - min; //get the actual number of random numbers possible
+            int randomNumber = rand.Next(range);
+            randomNumber += min; //shift value back up so it falls between min and max
+            return randomNumber;
         }
     }
 }
