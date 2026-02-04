@@ -47,7 +47,7 @@
         static void ChangeMyNumbers(ref int theNumber)
         {
             theNumber *= 2;
-            Console.WriteLine(theNumber);
+            Console.WriteLine();
         }
 
     }
