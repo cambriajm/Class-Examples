@@ -2,7 +2,7 @@
 * TODO:
 * [x] Track bingo balls drawn in a two dimensional array
 * [x] Display status of all balls on the console
-* [ ] Clear all drawn balls to start a new game
+* [x] Clear all drawn balls to start a new game
 * [x] Let the user quit
 * [x] Draw a random ball
 * [x] get a random number to determine ball letter
@@ -24,12 +24,43 @@ namespace BingoGame
         static void Main(string[] args)
         {
             string userInput = "";
+            int ballCount = 0;
+            string userPrompt = "";
+            string message = "";
             do
             {
-                Console.Clear();
-                DrawBall();
-                Display();
+                userPrompt = "Welcome to bingo, enter to draw a ball\n" +
+                "q to quit, c to clear";
+                    Console.Clear();
+                if(ballCount == 0)
+                {
+                    userPrompt = "Hit enter to get a ball";
+                    DrawBall();
+                    ballCount++;
+                }          
+                else if (ballCount < 75)
+                {
+                   
+                    DrawBall();
+                    ballCount++;
+                }
+                else
+                {
+                    userPrompt = "All balls have been drawn\n" +
+                         "q to quit, c to clear";
+                }
+                    Display();
+                Console.WriteLine(userPrompt);
+
+                Console.WriteLine(ballCount);
+               
                 userInput = Console.ReadLine(); //fixed double draw
+
+                if (userInput == "c" || userInput == "C")
+                {
+                    ClearDrawnBalls();
+                    ballCount = 0;
+                }
 
             } while (userInput != "Q" && userInput != "q");
             Console.Clear();
@@ -99,5 +130,20 @@ namespace BingoGame
             return rand.Next(range);
         }
 
+        static void ClearDrawnBalls()
+        {
+            for (int i = 0; i <= 4; i++)
+            {
+                //assemble the row
+                for (int j = 0; j < 15; j++)
+                {
+                    drawnBalls[i, j] = false;
+
+                }
+
+                }
+
+            }
+        }
     }
-}
+
