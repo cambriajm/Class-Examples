@@ -6,9 +6,10 @@
         {
             Console.WriteLine("Hello, World!");
 
-            WriteToFile();
-            AppendToFile();
-            ReadFile();
+            //WriteToFile();
+            //AppendToFile();
+            //ReadFile();
+            ReadEntireFile("..\\..\\..\\TestFileYEEHAW.txt");
             
             //pause
             //Console.Read();
@@ -41,5 +42,19 @@
 
                 }
             }
+
+        static void ReadEntireFile(string filePath)
+        {
+            using (StreamReader testFileNO = new StreamReader(filePath))
+            {
+
+                do
+                {
+                    Console.WriteLine(testFileNO.ReadLine());
+                } while (! testFileNO.EndOfStream);
+
+
+            }
+        }
     }
 }
