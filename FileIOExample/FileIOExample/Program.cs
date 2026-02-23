@@ -14,7 +14,6 @@ namespace FileIOExample
             //ReadEntireFile("..\\..\\..\\TestFileYEEHAW.txt");
             //ReadEntireFile("..\\..\\..\\email");
             FileToArray("..\\..\\..\\email.txt");
-            DisplayData();
             
             //pause
             Console.Read();
