@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             ExitButton = new Button();
             ClearButton = new Button();
             NameLabel = new Label();
             NameTextbox = new TextBox();
-            textBox1 = new TextBox();
+            AgeTextbox = new TextBox();
             label1 = new Label();
-            textBox2 = new TextBox();
+            PhoneTextbox = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
+            CityTextbox = new TextBox();
             label3 = new Label();
-            button1 = new Button();
+            SubmitButton = new Button();
             Buttons = new GroupBox();
             UserInfo = new GroupBox();
             groupBox1 = new GroupBox();
@@ -52,6 +53,7 @@
             UpperCase = new RadioButton();
             LowerCase = new RadioButton();
             Reverse = new RadioButton();
+            ToolTip = new ToolTip(components);
             Buttons.SuspendLayout();
             UserInfo.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -98,12 +100,12 @@
             NameTextbox.TabIndex = 1;
             NameTextbox.TextChanged += NameTextbox_TextChanged;
             // 
-            // textBox1
+            // AgeTextbox
             // 
-            textBox1.Location = new Point(88, 72);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(230, 27);
-            textBox1.TabIndex = 2;
+            AgeTextbox.Location = new Point(88, 72);
+            AgeTextbox.Name = "AgeTextbox";
+            AgeTextbox.Size = new Size(230, 27);
+            AgeTextbox.TabIndex = 2;
             // 
             // label1
             // 
@@ -114,12 +116,12 @@
             label1.TabIndex = 4;
             label1.Text = "Age";
             // 
-            // textBox2
+            // PhoneTextbox
             // 
-            textBox2.Location = new Point(88, 127);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(230, 27);
-            textBox2.TabIndex = 3;
+            PhoneTextbox.Location = new Point(88, 127);
+            PhoneTextbox.Name = "PhoneTextbox";
+            PhoneTextbox.Size = new Size(230, 27);
+            PhoneTextbox.TabIndex = 3;
             // 
             // label2
             // 
@@ -130,12 +132,12 @@
             label2.TabIndex = 6;
             label2.Text = "Phone";
             // 
-            // textBox3
+            // CityTextbox
             // 
-            textBox3.Location = new Point(88, 182);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(230, 27);
-            textBox3.TabIndex = 4;
+            CityTextbox.Location = new Point(88, 182);
+            CityTextbox.Name = "CityTextbox";
+            CityTextbox.Size = new Size(230, 27);
+            CityTextbox.TabIndex = 4;
             // 
             // label3
             // 
@@ -146,20 +148,20 @@
             label3.TabIndex = 8;
             label3.Text = "City";
             // 
-            // button1
+            // SubmitButton
             // 
-            button1.BackColor = Color.CadetBlue;
-            button1.Location = new Point(6, 26);
-            button1.Name = "button1";
-            button1.Size = new Size(148, 74);
-            button1.TabIndex = 5;
-            button1.Text = "&Submit";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            SubmitButton.BackColor = Color.CadetBlue;
+            SubmitButton.Location = new Point(6, 26);
+            SubmitButton.Name = "SubmitButton";
+            SubmitButton.Size = new Size(148, 74);
+            SubmitButton.TabIndex = 5;
+            SubmitButton.Text = "&Submit";
+            SubmitButton.UseVisualStyleBackColor = false;
+            SubmitButton.Click += button1_Click;
             // 
             // Buttons
             // 
-            Buttons.Controls.Add(button1);
+            Buttons.Controls.Add(SubmitButton);
             Buttons.Controls.Add(ClearButton);
             Buttons.Controls.Add(ExitButton);
             Buttons.Location = new Point(340, 326);
@@ -173,11 +175,11 @@
             // 
             UserInfo.Controls.Add(NameLabel);
             UserInfo.Controls.Add(NameTextbox);
-            UserInfo.Controls.Add(textBox3);
+            UserInfo.Controls.Add(CityTextbox);
             UserInfo.Controls.Add(label1);
             UserInfo.Controls.Add(label3);
-            UserInfo.Controls.Add(textBox1);
-            UserInfo.Controls.Add(textBox2);
+            UserInfo.Controls.Add(AgeTextbox);
+            UserInfo.Controls.Add(PhoneTextbox);
             UserInfo.Controls.Add(label2);
             UserInfo.Location = new Point(24, 23);
             UserInfo.Name = "UserInfo";
@@ -198,6 +200,7 @@
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
+            ToolTip.SetToolTip(groupBox1, "These are controls");
             // 
             // radioButton3
             // 
@@ -308,8 +311,10 @@
             // 
             // WinFormExampleForm
             // 
+            AcceptButton = SubmitButton;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            CancelButton = ClearButton;
             ClientSize = new Size(800, 450);
             Controls.Add(Reverse);
             Controls.Add(LowerCase);
@@ -321,7 +326,8 @@
             Controls.Add(Buttons);
             ForeColor = SystemColors.Desktop;
             Name = "WinFormExampleForm";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Example Form";
             Buttons.ResumeLayout(false);
             UserInfo.ResumeLayout(false);
             UserInfo.PerformLayout();
@@ -342,13 +348,13 @@
         private Button ClearButton;
         private Label NameLabel;
         private TextBox NameTextbox;
-        private TextBox textBox1;
+        private TextBox AgeTextbox;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox PhoneTextbox;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox CityTextbox;
         private Label label3;
-        private Button button1;
+        private Button SubmitButton;
         private GroupBox Buttons;
         private GroupBox UserInfo;
         private GroupBox groupBox1;
@@ -362,5 +368,6 @@
         private RadioButton UpperCase;
         private RadioButton LowerCase;
         private RadioButton Reverse;
+        private ToolTip ToolTip;
     }
 }

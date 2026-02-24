@@ -5,7 +5,20 @@ namespace WinFormsAppExample
         public WinFormExampleForm()
         {
             InitializeComponent();
+            SetDefaults();
         }
+
+        void SetDefaults()
+        {
+            NameTextbox.Text = "";
+            AgeTextbox.Text = "";
+            PhoneTextbox.Text = "";
+            CityTextbox.Text = "";
+
+            UpperCase.Checked = true;
+        }
+
+        //event handlers below 
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
@@ -14,7 +27,7 @@ namespace WinFormsAppExample
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
-            Console.Clear();
+             
         }
         private void SubmitButton_Click(object sender, EventArgs e)
         {
