@@ -80,7 +80,7 @@
             ClearButton.TabIndex = 6;
             ClearButton.Text = "&Clear";
             ClearButton.UseVisualStyleBackColor = false;
-            ClearButton.Click += SubmitButton_Click;
+            ClearButton.Click += ClearButton_Click;
             // 
             // NameLabel
             // 
@@ -157,7 +157,8 @@
             SubmitButton.TabIndex = 5;
             SubmitButton.Text = "&Submit";
             SubmitButton.UseVisualStyleBackColor = false;
-            SubmitButton.Click += button1_Click;
+            SubmitButton.Click += SubmitButton_Click;
+            
             // 
             // Buttons
             // 
@@ -169,7 +170,7 @@
             Buttons.Size = new Size(448, 112);
             Buttons.TabIndex = 5;
             Buttons.TabStop = false;
-            Buttons.Enter += groupBox1_Enter;
+            
             // 
             // UserInfo
             // 
@@ -212,7 +213,7 @@
             radioButton3.TabStop = true;
             radioButton3.Text = "radioButton3";
             radioButton3.UseVisualStyleBackColor = true;
-            radioButton3.CheckedChanged += radioButton3_CheckedChanged;
+            
             // 
             // radioButton2
             // 
@@ -335,6 +336,16 @@
             groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void NameTextbox_TextChanged(object sender, EventArgs e)
+        {
+            gthrow new NotImplementedException();
+        }
+
+        private void NameTextbox_TextChanged1(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void NameLabel_Click(object sender, EventArgs e)
