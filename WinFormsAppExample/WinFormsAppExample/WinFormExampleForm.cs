@@ -16,20 +16,40 @@ namespace WinFormsAppExample
             PhoneTextbox.Text = "";
             CityTextbox.Text = "";
 
-            UpperCase.Checked = true;
+            UpperCase();
+            Reverse();
             SubmitButton.Enabled = false;
         }
 
-        //event handlers below 
 
-        private void ValidateFields()
+        private void UpperCase()
         {
+            if (UpperCaseRadioButton.Checked)
+            {
+            NameTextbox.Text += NameTextbox.Text.ToUpper();
+
+            }
+        }
+
+        private void Reverse()
+        {
+            if (ReverseRadioButton.Checked)
+            {
+                NameTextbox.Text = new string (NameTextbox.Text.Reverse().ToArray());
+
+            }
+        }
+        //event handlers below -----------------------------------
+
+        private bool ValidateFields()
+        {
+            bool valid = false;
             string message = "";
 
             if (CityTextbox.Text == "")
             {
                 message = "City is required\n" + message;
-                CityTextbox.Focus();
+                
             }
 
             if (PhoneTextbox.Text == "")
@@ -49,6 +69,11 @@ namespace WinFormsAppExample
                 message = "Name is required\n" + message;
                 NameTextbox.Focus();
             }
+            if(message != "")
+            {
+                MessageBox.Show(message);
+            }
+            return true;
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -63,12 +88,13 @@ namespace WinFormsAppExample
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             ValidateFields();
+            UpperCase();
             //this.Text = NameTextbox.Text;
         }
 
         
 
-        private void NameTextbox_TextChanged()
+        private void NameTextbox_TextChanged(object sender, EventArgs e)
         {
             if(NameTextbox.Text != "")
             {
@@ -79,6 +105,21 @@ namespace WinFormsAppExample
             {
                 NameTextbox.BackColor = Color.Red;
                 SubmitButton.Enabled = false; 
+            }
+        }
+
+
+        private void AgeTextbox_TextChanged(object sender, EventArgs e)
+        {
+            if (AgeTextbox.Text != "")
+            {
+                AgeTextbox.BackColor = Color.Blue;
+                SubmitButton.Enabled = true;
+            }
+            else
+            {
+                AgeTextbox.BackColor = Color.Red;
+                SubmitButton.Enabled = false;
             }
         }
     }

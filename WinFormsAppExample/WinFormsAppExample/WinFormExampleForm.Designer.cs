@@ -50,9 +50,9 @@
             checkBox1 = new CheckBox();
             checkBox3 = new CheckBox();
             checkBox4 = new CheckBox();
-            UpperCase = new RadioButton();
+            UpperCaseRadioButton = new RadioButton();
             LowerCase = new RadioButton();
-            Reverse = new RadioButton();
+            ReverseRadioButton = new RadioButton();
             ToolTip = new ToolTip(components);
             Buttons.SuspendLayout();
             UserInfo.SuspendLayout();
@@ -90,7 +90,6 @@
             NameLabel.Size = new Size(49, 20);
             NameLabel.TabIndex = 2;
             NameLabel.Text = "Name";
-            NameLabel.Click += NameLabel_Click;
             // 
             // NameTextbox
             // 
@@ -106,6 +105,7 @@
             AgeTextbox.Name = "AgeTextbox";
             AgeTextbox.Size = new Size(230, 27);
             AgeTextbox.TabIndex = 2;
+            AgeTextbox.TextChanged += AgeTextbox_TextChanged;
             // 
             // label1
             // 
@@ -138,6 +138,7 @@
             CityTextbox.Name = "CityTextbox";
             CityTextbox.Size = new Size(230, 27);
             CityTextbox.TabIndex = 4;
+            CityTextbox.Text = "r";
             // 
             // label3
             // 
@@ -158,7 +159,6 @@
             SubmitButton.Text = "&Submit";
             SubmitButton.UseVisualStyleBackColor = false;
             SubmitButton.Click += SubmitButton_Click;
-            
             // 
             // Buttons
             // 
@@ -170,7 +170,6 @@
             Buttons.Size = new Size(448, 112);
             Buttons.TabIndex = 5;
             Buttons.TabStop = false;
-            
             // 
             // UserInfo
             // 
@@ -213,7 +212,6 @@
             radioButton3.TabStop = true;
             radioButton3.Text = "radioButton3";
             radioButton3.UseVisualStyleBackColor = true;
-            
             // 
             // radioButton2
             // 
@@ -279,14 +277,14 @@
             // 
             // UpperCase
             // 
-            UpperCase.AutoSize = true;
-            UpperCase.Location = new Point(24, 280);
-            UpperCase.Name = "UpperCase";
-            UpperCase.Size = new Size(71, 24);
-            UpperCase.TabIndex = 1;
-            UpperCase.TabStop = true;
-            UpperCase.Text = "Upper";
-            UpperCase.UseVisualStyleBackColor = true;
+            UpperCaseRadioButton.AutoSize = true;
+            UpperCaseRadioButton.Location = new Point(24, 280);
+            UpperCaseRadioButton.Name = "UpperCase";
+            UpperCaseRadioButton.Size = new Size(71, 24);
+            UpperCaseRadioButton.TabIndex = 1;
+            UpperCaseRadioButton.TabStop = true;
+            UpperCaseRadioButton.Text = "Upper";
+            UpperCaseRadioButton.UseVisualStyleBackColor = true;
             // 
             // LowerCase
             // 
@@ -301,14 +299,14 @@
             // 
             // Reverse
             // 
-            Reverse.AutoSize = true;
-            Reverse.Location = new Point(24, 340);
-            Reverse.Name = "Reverse";
-            Reverse.Size = new Size(81, 24);
-            Reverse.TabIndex = 14;
-            Reverse.TabStop = true;
-            Reverse.Text = "Reverse";
-            Reverse.UseVisualStyleBackColor = true;
+            ReverseRadioButton.AutoSize = true;
+            ReverseRadioButton.Location = new Point(24, 340);
+            ReverseRadioButton.Name = "Reverse";
+            ReverseRadioButton.Size = new Size(81, 24);
+            ReverseRadioButton.TabIndex = 14;
+            ReverseRadioButton.TabStop = true;
+            ReverseRadioButton.Text = "Reverse";
+            ReverseRadioButton.UseVisualStyleBackColor = true;
             // 
             // WinFormExampleForm
             // 
@@ -317,9 +315,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = ClearButton;
             ClientSize = new Size(800, 450);
-            Controls.Add(Reverse);
+            Controls.Add(ReverseRadioButton);
             Controls.Add(LowerCase);
-            Controls.Add(UpperCase);
+            Controls.Add(UpperCaseRadioButton);
             Controls.Add(checkBox4);
             Controls.Add(checkBox3);
             Controls.Add(groupBox1);
@@ -338,20 +336,10 @@
             PerformLayout();
         }
 
-        private void NameTextbox_TextChanged(object sender, EventArgs e)
-        {
-            gthrow new NotImplementedException();
-        }
 
-        private void NameTextbox_TextChanged1(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
-        private void NameLabel_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+
+
 
         #endregion
 
@@ -376,9 +364,9 @@
         private RadioButton radioButton1;
         private CheckBox checkBox3;
         private CheckBox checkBox4;
-        private RadioButton UpperCase;
+        private RadioButton UpperCaseRadioButton;
         private RadioButton LowerCase;
-        private RadioButton Reverse;
+        private RadioButton ReverseRadioButton;
         private ToolTip ToolTip;
     }
 }
