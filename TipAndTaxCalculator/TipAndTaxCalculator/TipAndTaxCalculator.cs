@@ -8,7 +8,10 @@ namespace TipAndTaxCalculator
         }
         
         //custom methods------------------------------------------------------
-
+        void SetDefaults()
+        {
+            DollarAmountTextBox.Text = "";
+        }
 
         //Event Handlers Below-------------------------------------------------
         private void ExitButton_Click(object sender, EventArgs e)
