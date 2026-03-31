@@ -33,14 +33,14 @@
             ExitButton = new Button();
             DollarAmountTextBox = new TextBox();
             AmountLabel = new Label();
-            label2 = new Label();
+            DisplayLabel = new Label();
             Tip15RadioButton = new RadioButton();
             Tip18RadioButton = new RadioButton();
             Tip20RadioButton = new RadioButton();
             TipLabel = new Label();
             TipCustom = new RadioButton();
             DiscountAAACheckBox = new CheckBox();
-            DiscountDCCheckBox2 = new CheckBox();
+            DiscountDCCheckBox = new CheckBox();
             DiscountLabel = new Label();
             TipCustomTextBox = new TextBox();
             SuspendLayout();
@@ -91,14 +91,14 @@
             AmountLabel.TabIndex = 4;
             AmountLabel.Text = "Dollar Amount";
             // 
-            // label2
+            // DisplayLabel
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(535, 72);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 20);
-            label2.TabIndex = 5;
-            label2.Text = "label2";
+            DisplayLabel.Font = new Font("Consolas", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DisplayLabel.Location = new Point(477, 66);
+            DisplayLabel.Name = "DisplayLabel";
+            DisplayLabel.Size = new Size(258, 276);
+            DisplayLabel.TabIndex = 5;
+            DisplayLabel.Text = " ";
             // 
             // Tip15RadioButton
             // 
@@ -121,7 +121,6 @@
             Tip18RadioButton.TabStop = true;
             Tip18RadioButton.Text = "18%";
             Tip18RadioButton.UseVisualStyleBackColor = true;
-            Tip18RadioButton.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // Tip20RadioButton
             // 
@@ -164,15 +163,15 @@
             DiscountAAACheckBox.Text = "AAA";
             DiscountAAACheckBox.UseVisualStyleBackColor = true;
             // 
-            // DiscountDCCheckBox2
+            // DiscountDCCheckBox
             // 
-            DiscountDCCheckBox2.AutoSize = true;
-            DiscountDCCheckBox2.Location = new Point(117, 263);
-            DiscountDCCheckBox2.Name = "DiscountDCCheckBox2";
-            DiscountDCCheckBox2.Size = new Size(111, 24);
-            DiscountDCCheckBox2.TabIndex = 12;
-            DiscountDCCheckBox2.Text = "Diner's Card";
-            DiscountDCCheckBox2.UseVisualStyleBackColor = true;
+            DiscountDCCheckBox.AutoSize = true;
+            DiscountDCCheckBox.Location = new Point(117, 263);
+            DiscountDCCheckBox.Name = "DiscountDCCheckBox";
+            DiscountDCCheckBox.Size = new Size(111, 24);
+            DiscountDCCheckBox.TabIndex = 12;
+            DiscountDCCheckBox.Text = "Diner's Card";
+            DiscountDCCheckBox.UseVisualStyleBackColor = true;
             // 
             // DiscountLabel
             // 
@@ -198,14 +197,14 @@
             ClientSize = new Size(800, 450);
             Controls.Add(TipCustomTextBox);
             Controls.Add(DiscountLabel);
-            Controls.Add(DiscountDCCheckBox2);
+            Controls.Add(DiscountDCCheckBox);
             Controls.Add(DiscountAAACheckBox);
             Controls.Add(TipCustom);
             Controls.Add(TipLabel);
             Controls.Add(Tip20RadioButton);
             Controls.Add(Tip18RadioButton);
             Controls.Add(Tip15RadioButton);
-            Controls.Add(label2);
+            Controls.Add(DisplayLabel);
             Controls.Add(AmountLabel);
             Controls.Add(DollarAmountTextBox);
             Controls.Add(ExitButton);
@@ -225,14 +224,14 @@
         private Button ExitButton;
         private TextBox DollarAmountTextBox;
         private Label AmountLabel;
-        private Label label2;
+        private Label DisplayLabel;
         private RadioButton Tip15RadioButton;
         private RadioButton Tip18RadioButton;
         private RadioButton Tip20RadioButton;
         private Label TipLabel;
         private RadioButton TipCustom;
         private CheckBox DiscountAAACheckBox;
-        private CheckBox DiscountDCCheckBox2;
+        private CheckBox DiscountDCCheckBox;
         private Label DiscountLabel;
         private TextBox TipCustomTextBox;
     }
