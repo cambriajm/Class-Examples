@@ -14,7 +14,7 @@ namespace TipAndTaxCalculator
             DollarAmountTextBox.Text = "";
             Tip15RadioButton.Checked = true;
             TipCustomTextBox.Text = "0";
-            TipCustomTextBox.Enabled = false;
+            TipCustomTextBox.Enabled = true;
             DiscountAAACheckBox.Checked = false;
             DiscountDCCheckBox.Checked = false;
             DisplayLabel.Text = "";
@@ -59,7 +59,12 @@ namespace TipAndTaxCalculator
         /// <returns>The calculated discount amount, equal to 3 percent of the specified amount.</returns>
         decimal CalculateAAADiscountOn(decimal thisAmount)
         {
-            return thisAmount * 0.03m;
+            decimal discount = 0;
+            if (DiscountAAACheckBox.Checked)
+            {
+                discount = thisAmount * 0.03m;
+            }
+            return discount;
         }
         /// <summary>
         /// Calculates the discount amount for a Diners Club card transaction based on the specified amount.
@@ -68,7 +73,12 @@ namespace TipAndTaxCalculator
         /// <returns>The discount amount to be applied to the transaction. The value is 5% of the specified amount.</returns>
         decimal CalculateDinersCardDiscountOn(decimal thisAmount)
         {
-            return thisAmount * 0.05m;
+            decimal discount = 0;
+            if (DiscountDCCheckBox.Checked)
+            {
+                discount = thisAmount * 0.05m;
+            }
+            return discount;
         }
         /// <summary>
         /// Calculates the tax amount for the specified monetary value using a fixed tax rate.
@@ -124,27 +134,7 @@ namespace TipAndTaxCalculator
 
         private void CalculateButton_Click(object sender, EventArgs e)
         {
-            decimal originalAmount = 0;
-            decimal totalDiscount = 0;
-            decimal tax = 0;
-            decimal tip = 0;
-            decimal amountDue = 0;
-            int padding = 15;
-            if (AllFeildsValid())
-            {
-                originalAmount = decimal.Parse(DollarAmountTextBox.Text);
-                totalDiscount += CalculateAAADiscountOn(originalAmount);
-                totalDiscount += CalculateDinersCardDiscountOn(originalAmount);
-                tax = CalculateTaxOn(originalAmount - totalDiscount);
-                tip = CalculateTipOn(originalAmount - totalDiscount + tax);
-                amountDue = originalAmount - totalDiscount + tax + tip;
-                DisplayLabel.Text = "Charges:".PadRight(padding)+ $"{originalAmount.ToString("C")}\n" +
-                    "Discount".PadRight(padding) + $"{totalDiscount.ToString("C")}\n" +
-                    "Sales Tax:".PadRight(padding) + $"{tax.ToString("C")}\n" +
-                    "Subtotal".PadRight(padding) + $"??\n" +
-                    "Tip:".PadRight(padding) + $"{tip.ToString("C")}\n" +
-                    "Total".PadRight(padding) + $"{amountDue.ToString("C")}";
-            }
+            DisplayTransaction();
         }
 
         private void DollarAmountTextBox_TextChanged(object sender, EventArgs e)
@@ -162,6 +152,34 @@ namespace TipAndTaxCalculator
             {
                 TipCustomTextBox.Text = "";
                 TipCustomTextBox.Enabled = false;
+            }
+        }
+
+        private void DisplayTransaction()
+        {
+            decimal originalAmount = 0;
+            decimal totalDiscount = 0;
+            decimal tax = 0;
+            decimal tip = 0;
+            decimal subtotal = 0;
+            decimal amountDue = 0;
+            int padding = 15;
+            if (AllFeildsValid())
+            {
+                originalAmount = decimal.Parse(DollarAmountTextBox.Text);
+                totalDiscount += CalculateAAADiscountOn(originalAmount);
+                totalDiscount += CalculateDinersCardDiscountOn(originalAmount);
+                tax = CalculateTaxOn(originalAmount - totalDiscount);
+                subtotal = originalAmount - totalDiscount + tax;
+                tip = CalculateTipOn((originalAmount - totalDiscount) + tax, decimal.Parse(TipCustomTextBox.Text));
+                amountDue = originalAmount - totalDiscount + tax + tip;
+                DisplayLabel.Text =
+                     $"Charges:     {originalAmount:C}\n" +
+                     $"Discount:    {totalDiscount:C}\n" +
+                     $"Sales Tax:   {tax:C}\n" +
+                     $"Subtotal     {subtotal:C}\n" +
+                     $"Tip:         {tip:C}\n" +
+                     $"Total        {amountDue:C}\n";
             }
         }
     }

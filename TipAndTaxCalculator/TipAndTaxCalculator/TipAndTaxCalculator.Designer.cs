@@ -43,13 +43,15 @@
             DiscountDCCheckBox = new CheckBox();
             DiscountLabel = new Label();
             TipCustomTextBox = new TextBox();
+            TipCurrencyLabel = new Label();
             SuspendLayout();
             // 
             // CalculateButton
             // 
-            CalculateButton.Location = new Point(494, 373);
+            CalculateButton.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CalculateButton.Location = new Point(465, 373);
             CalculateButton.Name = "CalculateButton";
-            CalculateButton.Size = new Size(94, 65);
+            CalculateButton.Size = new Size(123, 65);
             CalculateButton.TabIndex = 0;
             CalculateButton.Text = "Calculate";
             CalculateButton.UseVisualStyleBackColor = true;
@@ -57,6 +59,7 @@
             // 
             // ClearButton
             // 
+            ClearButton.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ClearButton.Location = new Point(594, 373);
             ClearButton.Name = "ClearButton";
             ClearButton.Size = new Size(94, 65);
@@ -67,6 +70,7 @@
             // 
             // ExitButton
             // 
+            ExitButton.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ExitButton.Location = new Point(694, 373);
             ExitButton.Name = "ExitButton";
             ExitButton.Size = new Size(94, 65);
@@ -77,35 +81,37 @@
             // 
             // DollarAmountTextBox
             // 
-            DollarAmountTextBox.Location = new Point(114, 66);
+            DollarAmountTextBox.Location = new Point(150, 71);
             DollarAmountTextBox.Name = "DollarAmountTextBox";
-            DollarAmountTextBox.Size = new Size(297, 27);
+            DollarAmountTextBox.Size = new Size(253, 27);
             DollarAmountTextBox.TabIndex = 3;
             // 
             // AmountLabel
             // 
             AmountLabel.AutoSize = true;
+            AmountLabel.Font = new Font("Consolas", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AmountLabel.Location = new Point(4, 73);
             AmountLabel.Name = "AmountLabel";
-            AmountLabel.Size = new Size(107, 20);
+            AmountLabel.Size = new Size(140, 22);
             AmountLabel.TabIndex = 4;
             AmountLabel.Text = "Dollar Amount";
             // 
             // DisplayLabel
             // 
-            DisplayLabel.Font = new Font("Consolas", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            DisplayLabel.Location = new Point(477, 66);
+            DisplayLabel.Font = new Font("Consolas", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DisplayLabel.Location = new Point(447, 34);
             DisplayLabel.Name = "DisplayLabel";
-            DisplayLabel.Size = new Size(258, 276);
+            DisplayLabel.Size = new Size(308, 308);
             DisplayLabel.TabIndex = 5;
             DisplayLabel.Text = " ";
             // 
             // Tip15RadioButton
             // 
             Tip15RadioButton.AutoSize = true;
+            Tip15RadioButton.Font = new Font("Consolas", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Tip15RadioButton.Location = new Point(117, 113);
             Tip15RadioButton.Name = "Tip15RadioButton";
-            Tip15RadioButton.Size = new Size(58, 24);
+            Tip15RadioButton.Size = new Size(61, 26);
             Tip15RadioButton.TabIndex = 6;
             Tip15RadioButton.TabStop = true;
             Tip15RadioButton.Text = "15%";
@@ -114,9 +120,10 @@
             // Tip18RadioButton
             // 
             Tip18RadioButton.AutoSize = true;
+            Tip18RadioButton.Font = new Font("Consolas", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Tip18RadioButton.Location = new Point(117, 143);
             Tip18RadioButton.Name = "Tip18RadioButton";
-            Tip18RadioButton.Size = new Size(58, 24);
+            Tip18RadioButton.Size = new Size(61, 26);
             Tip18RadioButton.TabIndex = 7;
             Tip18RadioButton.TabStop = true;
             Tip18RadioButton.Text = "18%";
@@ -125,9 +132,10 @@
             // Tip20RadioButton
             // 
             Tip20RadioButton.AutoSize = true;
+            Tip20RadioButton.Font = new Font("Consolas", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Tip20RadioButton.Location = new Point(117, 173);
             Tip20RadioButton.Name = "Tip20RadioButton";
-            Tip20RadioButton.Size = new Size(58, 24);
+            Tip20RadioButton.Size = new Size(61, 26);
             Tip20RadioButton.TabIndex = 8;
             Tip20RadioButton.TabStop = true;
             Tip20RadioButton.Text = "20%";
@@ -136,18 +144,20 @@
             // TipLabel
             // 
             TipLabel.AutoSize = true;
-            TipLabel.Location = new Point(24, 115);
+            TipLabel.Font = new Font("Consolas", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TipLabel.Location = new Point(4, 114);
             TipLabel.Name = "TipLabel";
-            TipLabel.Size = new Size(87, 20);
+            TipLabel.Size = new Size(110, 22);
             TipLabel.TabIndex = 9;
             TipLabel.Text = "Tip Amount";
             // 
             // TipCustom
             // 
             TipCustom.AutoSize = true;
+            TipCustom.Font = new Font("Consolas", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TipCustom.Location = new Point(117, 203);
             TipCustom.Name = "TipCustom";
-            TipCustom.Size = new Size(80, 24);
+            TipCustom.Size = new Size(91, 26);
             TipCustom.TabIndex = 10;
             TipCustom.TabStop = true;
             TipCustom.Text = "Custom";
@@ -156,9 +166,10 @@
             // DiscountAAACheckBox
             // 
             DiscountAAACheckBox.AutoSize = true;
-            DiscountAAACheckBox.Location = new Point(117, 233);
+            DiscountAAACheckBox.Font = new Font("Consolas", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DiscountAAACheckBox.Location = new Point(117, 248);
             DiscountAAACheckBox.Name = "DiscountAAACheckBox";
-            DiscountAAACheckBox.Size = new Size(61, 24);
+            DiscountAAACheckBox.Size = new Size(62, 26);
             DiscountAAACheckBox.TabIndex = 11;
             DiscountAAACheckBox.Text = "AAA";
             DiscountAAACheckBox.UseVisualStyleBackColor = true;
@@ -166,9 +177,10 @@
             // DiscountDCCheckBox
             // 
             DiscountDCCheckBox.AutoSize = true;
-            DiscountDCCheckBox.Location = new Point(117, 263);
+            DiscountDCCheckBox.Font = new Font("Consolas", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DiscountDCCheckBox.Location = new Point(117, 278);
             DiscountDCCheckBox.Name = "DiscountDCCheckBox";
-            DiscountDCCheckBox.Size = new Size(111, 24);
+            DiscountDCCheckBox.Size = new Size(152, 26);
             DiscountDCCheckBox.TabIndex = 12;
             DiscountDCCheckBox.Text = "Diner's Card";
             DiscountDCCheckBox.UseVisualStyleBackColor = true;
@@ -176,25 +188,37 @@
             // DiscountLabel
             // 
             DiscountLabel.AutoSize = true;
-            DiscountLabel.Location = new Point(24, 233);
+            DiscountLabel.Font = new Font("Consolas", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DiscountLabel.Location = new Point(4, 248);
             DiscountLabel.Name = "DiscountLabel";
-            DiscountLabel.Size = new Size(67, 20);
+            DiscountLabel.Size = new Size(90, 22);
             DiscountLabel.TabIndex = 13;
             DiscountLabel.Text = "Discount";
             // 
             // TipCustomTextBox
             // 
-            TipCustomTextBox.Location = new Point(203, 203);
+            TipCustomTextBox.Location = new Point(251, 203);
             TipCustomTextBox.Name = "TipCustomTextBox";
-            TipCustomTextBox.Size = new Size(125, 27);
+            TipCustomTextBox.Size = new Size(124, 27);
             TipCustomTextBox.TabIndex = 14;
             TipCustomTextBox.TabStop = false;
+            // 
+            // TipCurrencyLabel
+            // 
+            TipCurrencyLabel.AutoSize = true;
+            TipCurrencyLabel.Font = new Font("Consolas", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TipCurrencyLabel.Location = new Point(234, 205);
+            TipCurrencyLabel.Name = "TipCurrencyLabel";
+            TipCurrencyLabel.Size = new Size(20, 22);
+            TipCurrencyLabel.TabIndex = 15;
+            TipCurrencyLabel.Text = "$";
             // 
             // TipAndTaxCalculator
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(TipCurrencyLabel);
             Controls.Add(TipCustomTextBox);
             Controls.Add(DiscountLabel);
             Controls.Add(DiscountDCCheckBox);
@@ -234,5 +258,6 @@
         private CheckBox DiscountDCCheckBox;
         private Label DiscountLabel;
         private TextBox TipCustomTextBox;
+        private Label TipCurrencyLabel;
     }
 }
