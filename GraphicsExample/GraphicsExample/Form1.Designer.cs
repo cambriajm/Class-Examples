@@ -46,21 +46,26 @@
             // 
             // DrawButton
             // 
+            DrawButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             DrawButton.Location = new Point(588, 481);
             DrawButton.Name = "DrawButton";
             DrawButton.Size = new Size(150, 59);
             DrawButton.TabIndex = 1;
             DrawButton.Text = "Draw";
             DrawButton.UseVisualStyleBackColor = true;
+            DrawButton.Click += DrawButton_Click;
             // 
             // ExitButton
             // 
+            ExitButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            ExitButton.AutoSize = true;
             ExitButton.Location = new Point(758, 481);
             ExitButton.Name = "ExitButton";
             ExitButton.Size = new Size(150, 59);
             ExitButton.TabIndex = 2;
             ExitButton.Text = "E&xit";
             ExitButton.UseVisualStyleBackColor = true;
+            ExitButton.Click += ExitButton_Click;
             // 
             // GraphicsForm
             // 
@@ -74,6 +79,7 @@
             Text = "Graphics";
             ((System.ComponentModel.ISupportInitialize)DisplayPictureBox).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
