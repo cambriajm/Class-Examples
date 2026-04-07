@@ -5,6 +5,7 @@ namespace GraphicsExample
         public GraphicsForm()
         {
             InitializeComponent();
+            DisplayPictureBox.MouseMove += DisplayPictureBox_MouseMove;
         }
 
         private void DrawButton_Click(object sender, EventArgs e)
@@ -14,6 +15,7 @@ namespace GraphicsExample
             drawRectangle();
             drawPie();
             drawText();
+            DrawImage();
 
         }
         private void ExitButton_Click(object sender, EventArgs e)
@@ -31,6 +33,21 @@ namespace GraphicsExample
             thePen.Width = 10;
             //draw the line here
             g.DrawLine(thePen, 0, 0, DisplayPictureBox.Width, DisplayPictureBox.Height);
+
+            //free up resources
+            g.Dispose();
+            thePen.Dispose();
+
+        }
+        void DrawLineSegment(int newX, int newY)
+        {
+            //create a Graphics object named g that draws on the picture box
+            Graphics g = DisplayPictureBox.CreateGraphics();
+            // create a pen to draw with
+            Pen thePen = new Pen(Color.Black);
+            
+            //draw the line here
+            g.DrawLine(thePen, 0, 0, newX, newY);
 
             //free up resources
             g.Dispose();
@@ -106,7 +123,21 @@ namespace GraphicsExample
         }
 
         //image
+        private void DrawImage()
+        {
+        Graphics g = DisplayPictureBox.CreateGraphics();
 
-
+            Rectangle bounds = new Rectangle(10, 10, 200, 450);
+            Image TheImage = Image.FromFile("..\\..\\..\\FrodWhimsyCropped.png");
+            g.DrawImage(TheImage,Bounds); 
+            //free up resources
+            g.Dispose();
+           
+        }
+        private void DisplayPictureBox_MouseMove(object? sender, MouseEventArgs e)
+        { 
+            this.Text = $"{e.X},{e.Y}";
+            DrawLineSegment(e.X, e.Y);
+        }
     }
 }
