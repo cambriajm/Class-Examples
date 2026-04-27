@@ -42,21 +42,28 @@
             SubmitButton = new Button();
             Buttons = new GroupBox();
             UserInfo = new GroupBox();
-            groupBox1 = new GroupBox();
-            radioButton3 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
-            checkBox2 = new CheckBox();
-            checkBox1 = new CheckBox();
-            checkBox3 = new CheckBox();
-            checkBox4 = new CheckBox();
             UpperCaseRadioButton = new RadioButton();
             LowerCase = new RadioButton();
             ReverseRadioButton = new RadioButton();
             ToolTip = new ToolTip(components);
+            MainOpenFileDIalog = new OpenFileDialog();
+            menuStrip1 = new MenuStrip();
+            FileMenuItem = new ToolStripMenuItem();
+            OpenMenuItem = new ToolStripMenuItem();
+            SubmitMenuItem = new ToolStripMenuItem();
+            ClearMenuItem = new ToolStripMenuItem();
+            ExitMenuItem = new ToolStripMenuItem();
+            HelpMenuItem = new ToolStripMenuItem();
+            DisplayListBox = new ListBox();
+            FilterGroupBox = new GroupBox();
+            LastNameRadioButton = new RadioButton();
+            FirstNameRadioButton = new RadioButton();
+            CityRadioButton = new RadioButton();
+            FilterComboBox = new ComboBox();
             Buttons.SuspendLayout();
             UserInfo.SuspendLayout();
-            groupBox1.SuspendLayout();
+            menuStrip1.SuspendLayout();
+            FilterGroupBox.SuspendLayout();
             SuspendLayout();
             // 
             // ExitButton
@@ -138,7 +145,6 @@
             CityTextbox.Name = "CityTextbox";
             CityTextbox.Size = new Size(230, 27);
             CityTextbox.TabIndex = 4;
-            CityTextbox.Text = "r";
             // 
             // label3
             // 
@@ -187,99 +193,11 @@
             UserInfo.TabIndex = 0;
             UserInfo.TabStop = false;
             // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(radioButton3);
-            groupBox1.Controls.Add(radioButton2);
-            groupBox1.Controls.Add(radioButton1);
-            groupBox1.Controls.Add(checkBox2);
-            groupBox1.Controls.Add(checkBox1);
-            groupBox1.Location = new Point(386, 32);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(406, 216);
-            groupBox1.TabIndex = 4;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
-            ToolTip.SetToolTip(groupBox1, "These are controls");
-            // 
-            // radioButton3
-            // 
-            radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(33, 168);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(117, 24);
-            radioButton3.TabIndex = 4;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "radioButton3";
-            radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(33, 138);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(117, 24);
-            radioButton2.TabIndex = 3;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "radioButton2";
-            radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(33, 108);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(117, 24);
-            radioButton1.TabIndex = 2;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "radioButton1";
-            radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(33, 67);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(101, 24);
-            checkBox2.TabIndex = 1;
-            checkBox2.Text = "checkBox2";
-            checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(33, 37);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(101, 24);
-            checkBox1.TabIndex = 0;
-            checkBox1.Text = "checkBox1";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(172, 326);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(101, 24);
-            checkBox3.TabIndex = 3;
-            checkBox3.Text = "checkBox3";
-            checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(172, 356);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(101, 24);
-            checkBox4.TabIndex = 12;
-            checkBox4.Text = "checkBox4";
-            checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // UpperCase
+            // UpperCaseRadioButton
             // 
             UpperCaseRadioButton.AutoSize = true;
             UpperCaseRadioButton.Location = new Point(24, 280);
-            UpperCaseRadioButton.Name = "UpperCase";
+            UpperCaseRadioButton.Name = "UpperCaseRadioButton";
             UpperCaseRadioButton.Size = new Size(71, 24);
             UpperCaseRadioButton.TabIndex = 1;
             UpperCaseRadioButton.TabStop = true;
@@ -297,16 +215,132 @@
             LowerCase.Text = "Lower";
             LowerCase.UseVisualStyleBackColor = true;
             // 
-            // Reverse
+            // ReverseRadioButton
             // 
             ReverseRadioButton.AutoSize = true;
             ReverseRadioButton.Location = new Point(24, 340);
-            ReverseRadioButton.Name = "Reverse";
+            ReverseRadioButton.Name = "ReverseRadioButton";
             ReverseRadioButton.Size = new Size(81, 24);
             ReverseRadioButton.TabIndex = 14;
             ReverseRadioButton.TabStop = true;
             ReverseRadioButton.Text = "Reverse";
             ReverseRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // MainOpenFileDIalog
+            // 
+            MainOpenFileDIalog.FileName = "openFileDialog1";
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { FileMenuItem, HelpMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.TabIndex = 15;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // FileMenuItem
+            // 
+            FileMenuItem.DropDownItems.AddRange(new ToolStripItem[] { OpenMenuItem, SubmitMenuItem, ClearMenuItem, ExitMenuItem });
+            FileMenuItem.Name = "FileMenuItem";
+            FileMenuItem.Size = new Size(46, 24);
+            FileMenuItem.Text = "File";
+            // 
+            // OpenMenuItem
+            // 
+            OpenMenuItem.Name = "OpenMenuItem";
+            OpenMenuItem.Size = new Size(139, 26);
+            OpenMenuItem.Text = "&Open";
+            OpenMenuItem.Click += OpenMenuItem_Click_1;
+            // 
+            // SubmitMenuItem
+            // 
+            SubmitMenuItem.Name = "SubmitMenuItem";
+            SubmitMenuItem.Size = new Size(139, 26);
+            SubmitMenuItem.Text = "&Submit";
+            // 
+            // ClearMenuItem
+            // 
+            ClearMenuItem.Name = "ClearMenuItem";
+            ClearMenuItem.Size = new Size(139, 26);
+            ClearMenuItem.Text = "&Clear";
+            // 
+            // ExitMenuItem
+            // 
+            ExitMenuItem.Name = "ExitMenuItem";
+            ExitMenuItem.Size = new Size(139, 26);
+            ExitMenuItem.Text = "E&xit";
+            // 
+            // HelpMenuItem
+            // 
+            HelpMenuItem.Name = "HelpMenuItem";
+            HelpMenuItem.Size = new Size(55, 24);
+            HelpMenuItem.Text = "Help";
+            // 
+            // DisplayListBox
+            // 
+            DisplayListBox.FormattingEnabled = true;
+            DisplayListBox.Location = new Point(388, 44);
+            DisplayListBox.Name = "DisplayListBox";
+            DisplayListBox.Size = new Size(375, 244);
+            DisplayListBox.TabIndex = 16;
+            // 
+            // FilterGroupBox
+            // 
+            FilterGroupBox.Controls.Add(LastNameRadioButton);
+            FilterGroupBox.Controls.Add(FirstNameRadioButton);
+            FilterGroupBox.Controls.Add(CityRadioButton);
+            FilterGroupBox.Location = new Point(152, 274);
+            FilterGroupBox.Name = "FilterGroupBox";
+            FilterGroupBox.Size = new Size(160, 144);
+            FilterGroupBox.TabIndex = 17;
+            FilterGroupBox.TabStop = false;
+            FilterGroupBox.Text = "Filter";
+            // 
+            // LastNameRadioButton
+            // 
+            LastNameRadioButton.AutoSize = true;
+            LastNameRadioButton.Location = new Point(26, 96);
+            LastNameRadioButton.Name = "LastNameRadioButton";
+            LastNameRadioButton.Size = new Size(100, 24);
+            LastNameRadioButton.TabIndex = 20;
+            LastNameRadioButton.TabStop = true;
+            LastNameRadioButton.Text = "Last Name";
+            LastNameRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // FirstNameRadioButton
+            // 
+            FirstNameRadioButton.AutoSize = true;
+            FirstNameRadioButton.Location = new Point(26, 66);
+            FirstNameRadioButton.Name = "FirstNameRadioButton";
+            FirstNameRadioButton.Size = new Size(101, 24);
+            FirstNameRadioButton.TabIndex = 19;
+            FirstNameRadioButton.TabStop = true;
+            FirstNameRadioButton.Text = "First Name";
+            FirstNameRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // CityRadioButton
+            // 
+            CityRadioButton.AutoSize = true;
+            CityRadioButton.Location = new Point(26, 36);
+            CityRadioButton.Name = "CityRadioButton";
+            CityRadioButton.Size = new Size(55, 24);
+            CityRadioButton.TabIndex = 18;
+            CityRadioButton.TabStop = true;
+            CityRadioButton.Text = "City";
+            CityRadioButton.UseVisualStyleBackColor = true;
+            CityRadioButton.CheckedChanged += CityRadioButton_CheckedChanged;
+            // 
+            // FilterComboBox
+            // 
+            FilterComboBox.FormattingEnabled = true;
+            FilterComboBox.Location = new Point(416, 5);
+            FilterComboBox.Name = "FilterComboBox";
+            FilterComboBox.Size = new Size(171, 28);
+            FilterComboBox.TabIndex = 18;
+            FilterComboBox.Text = "Filter";
+            FilterComboBox.SelectedIndexChanged += FilterComboBox_SelectedIndexChanged;
             // 
             // WinFormExampleForm
             // 
@@ -315,23 +349,27 @@
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = ClearButton;
             ClientSize = new Size(800, 450);
+            Controls.Add(FilterComboBox);
+            Controls.Add(FilterGroupBox);
+            Controls.Add(DisplayListBox);
             Controls.Add(ReverseRadioButton);
             Controls.Add(LowerCase);
             Controls.Add(UpperCaseRadioButton);
-            Controls.Add(checkBox4);
-            Controls.Add(checkBox3);
-            Controls.Add(groupBox1);
             Controls.Add(UserInfo);
             Controls.Add(Buttons);
+            Controls.Add(menuStrip1);
             ForeColor = SystemColors.Desktop;
+            MainMenuStrip = menuStrip1;
             Name = "WinFormExampleForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Example Form";
             Buttons.ResumeLayout(false);
             UserInfo.ResumeLayout(false);
             UserInfo.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            FilterGroupBox.ResumeLayout(false);
+            FilterGroupBox.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -356,17 +394,23 @@
         private Button SubmitButton;
         private GroupBox Buttons;
         private GroupBox UserInfo;
-        private GroupBox groupBox1;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
-        private CheckBox checkBox3;
-        private CheckBox checkBox4;
         private RadioButton UpperCaseRadioButton;
         private RadioButton LowerCase;
         private RadioButton ReverseRadioButton;
         private ToolTip ToolTip;
+        private OpenFileDialog MainOpenFileDIalog;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem FileMenuItem;
+        private ToolStripMenuItem OpenMenuItem;
+        private ToolStripMenuItem SubmitMenuItem;
+        private ToolStripMenuItem ClearMenuItem;
+        private ToolStripMenuItem ExitMenuItem;
+        private ToolStripMenuItem HelpMenuItem;
+        private ListBox DisplayListBox;
+        private GroupBox FilterGroupBox;
+        private RadioButton LastNameRadioButton;
+        private RadioButton FirstNameRadioButton;
+        private RadioButton CityRadioButton;
+        private ComboBox FilterComboBox;
     }
 }
